@@ -11,7 +11,7 @@
 
 @protocol TableViewCellDelegate <NSObject>
 
-//Deleted된거 알려줌
+//Deleted된거 알려줌!
 -(void) toDoItemDeleted:(ToDoItem *)todoItem;
 -(void) toDoItemCompleted:(ToDoItem *)todoItem;
 @end

@@ -14,5 +14,4 @@
 -(id)initWithText:(NSString*)text; //텍스트 주고 ToDoItem반환
 +(id)toDoItemWithText:(NSString*)text; //클래스 메서드
 
-
 @end
