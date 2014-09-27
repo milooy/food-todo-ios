@@ -24,6 +24,8 @@
 		1AAEB47B19ACD58A00B69773 /* ToDoItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB47A19ACD58A00B69773 /* ToDoItem.m */; };
 		1AAEB47E19ADF52B00B69773 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAEB47D19ADF52B00B69773 /* TableViewCell.m */; };
 		1AAEB48A19AE0E7400B69773 /* foodtodo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AAEB48919AE0E7400B69773 /* foodtodo2.jpg */; };
+		1ADF053519D7720100277097 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF053419D7720100277097 /* TableView.m */; };
+		1ADF502519D3F49A000E08CA /* StrikethroughLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF502419D3F49A000E08CA /* StrikethroughLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,11 @@
 		1AAEB47D19ADF52B00B69773 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 		1AAEB48919AE0E7400B69773 /* foodtodo2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = foodtodo2.jpg; sourceTree = "<group>"; };
 		1AAEB48B19AECE3900B69773 /* TableViewCellDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCellDelegate.h; sourceTree = "<group>"; };
+		1ADF053319D7720100277097 /* TableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableView.h; path = ../TableView.h; sourceTree = "<group>"; };
+		1ADF053419D7720100277097 /* TableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableView.m; path = ../TableView.m; sourceTree = "<group>"; };
+		1ADF053619D772F100277097 /* TableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
+		1ADF502319D3F49A000E08CA /* StrikethroughLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrikethroughLabel.h; sourceTree = "<group>"; };
+		1ADF502419D3F49A000E08CA /* StrikethroughLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrikethroughLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +128,9 @@
 		1AAEB44A19ACD3AE00B69773 /* FoodTodo */ = {
 			isa = PBXGroup;
 			children = (
+				1ADF053619D772F100277097 /* TableViewDataSource.h */,
+				1ADF053319D7720100277097 /* TableView.h */,
+				1ADF053419D7720100277097 /* TableView.m */,
 				1AAEB48919AE0E7400B69773 /* foodtodo2.jpg */,
 				1AAEB45319ACD3AE00B69773 /* AppDelegate.h */,
 				1AAEB45419ACD3AE00B69773 /* AppDelegate.m */,
@@ -134,6 +144,8 @@
 				1AAEB47C19ADF52B00B69773 /* TableViewCell.h */,
 				1AAEB47D19ADF52B00B69773 /* TableViewCell.m */,
 				1AAEB48B19AECE3900B69773 /* TableViewCellDelegate.h */,
+				1ADF502319D3F49A000E08CA /* StrikethroughLabel.h */,
+				1ADF502419D3F49A000E08CA /* StrikethroughLabel.m */,
 			);
 			path = FoodTodo;
 			sourceTree = "<group>";
@@ -268,7 +280,9 @@
 				1AAEB45B19ACD3AE00B69773 /* ViewController.m in Sources */,
 				1AAEB45519ACD3AE00B69773 /* AppDelegate.m in Sources */,
 				1AAEB47B19ACD58A00B69773 /* ToDoItem.m in Sources */,
+				1ADF053519D7720100277097 /* TableView.m in Sources */,
 				1AAEB47E19ADF52B00B69773 /* TableViewCell.m in Sources */,
+				1ADF502519D3F49A000E08CA /* StrikethroughLabel.m in Sources */,
 				1AAEB45119ACD3AE00B69773 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,7 +411,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoodTodo/FoodTodo-Prefix.pch";
 				INFOPLIST_FILE = "FoodTodo/FoodTodo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,7 +426,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FoodTodo/FoodTodo-Prefix.pch";
 				INFOPLIST_FILE = "FoodTodo/FoodTodo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +492,7 @@
 				1AAEB47519ACD3AE00B69773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AAEB47619ACD3AE00B69773 /* Build configuration list for PBXNativeTarget "FoodTodoTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +501,7 @@
 				1AAEB47819ACD3AE00B69773 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
