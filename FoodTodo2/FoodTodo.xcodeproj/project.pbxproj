@@ -26,6 +26,12 @@
 		1AAEB48A19AE0E7400B69773 /* foodtodo2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1AAEB48919AE0E7400B69773 /* foodtodo2.jpg */; };
 		1ADF053519D7720100277097 /* TableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF053419D7720100277097 /* TableView.m */; };
 		1ADF502519D3F49A000E08CA /* StrikethroughLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADF502419D3F49A000E08CA /* StrikethroughLabel.m */; };
+		1AF12D0B19D92531001AE1FF /* foodtodo_bgr.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF12D0A19D92531001AE1FF /* foodtodo_bgr.png */; };
+		1AF12D0E19D94828001AE1FF /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 1AF12D0C19D94828001AE1FF /* MyParticle.sks */; };
+		1AF12D0F19D94828001AE1FF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF12D0D19D94828001AE1FF /* spark.png */; };
+		1AF12D1119D948B2001AE1FF /* todomon0.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF12D1019D948B2001AE1FF /* todomon0.png */; };
+		1AF12D1419D95BBE001AE1FF /* todomon0-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF12D1219D95BBE001AE1FF /* todomon0-1.png */; };
+		1AF12D1519D95BBE001AE1FF /* todomon0-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AF12D1319D95BBE001AE1FF /* todomon0-2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		1ADF053619D772F100277097 /* TableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
 		1ADF502319D3F49A000E08CA /* StrikethroughLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrikethroughLabel.h; sourceTree = "<group>"; };
 		1ADF502419D3F49A000E08CA /* StrikethroughLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrikethroughLabel.m; sourceTree = "<group>"; };
+		1AF12D0A19D92531001AE1FF /* foodtodo_bgr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = foodtodo_bgr.png; sourceTree = "<group>"; };
+		1AF12D0C19D94828001AE1FF /* MyParticle.sks */ = {isa = PBXFileReference; explicitFileType = image.gif; path = MyParticle.sks; sourceTree = "<group>"; };
+		1AF12D0D19D94828001AE1FF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		1AF12D1019D948B2001AE1FF /* todomon0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = todomon0.png; sourceTree = "<group>"; };
+		1AF12D1219D95BBE001AE1FF /* todomon0-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "todomon0-1.png"; sourceTree = "<group>"; };
+		1AF12D1319D95BBE001AE1FF /* todomon0-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "todomon0-2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +140,14 @@
 		1AAEB44A19ACD3AE00B69773 /* FoodTodo */ = {
 			isa = PBXGroup;
 			children = (
+				1AF12D1019D948B2001AE1FF /* todomon0.png */,
+				1AF12D0A19D92531001AE1FF /* foodtodo_bgr.png */,
 				1ADF053619D772F100277097 /* TableViewDataSource.h */,
 				1ADF053319D7720100277097 /* TableView.h */,
 				1ADF053419D7720100277097 /* TableView.m */,
 				1AAEB48919AE0E7400B69773 /* foodtodo2.jpg */,
+				1AF12D1219D95BBE001AE1FF /* todomon0-1.png */,
+				1AF12D1319D95BBE001AE1FF /* todomon0-2.png */,
 				1AAEB45319ACD3AE00B69773 /* AppDelegate.h */,
 				1AAEB45419ACD3AE00B69773 /* AppDelegate.m */,
 				1AAEB45619ACD3AE00B69773 /* Main.storyboard */,
@@ -146,6 +162,8 @@
 				1AAEB48B19AECE3900B69773 /* TableViewCellDelegate.h */,
 				1ADF502319D3F49A000E08CA /* StrikethroughLabel.h */,
 				1ADF502419D3F49A000E08CA /* StrikethroughLabel.m */,
+				1AF12D0C19D94828001AE1FF /* MyParticle.sks */,
+				1AF12D0D19D94828001AE1FF /* spark.png */,
 			);
 			path = FoodTodo;
 			sourceTree = "<group>";
@@ -256,9 +274,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAEB48A19AE0E7400B69773 /* foodtodo2.jpg in Resources */,
+				1AF12D1419D95BBE001AE1FF /* todomon0-1.png in Resources */,
+				1AF12D0E19D94828001AE1FF /* MyParticle.sks in Resources */,
+				1AF12D0B19D92531001AE1FF /* foodtodo_bgr.png in Resources */,
+				1AF12D0F19D94828001AE1FF /* spark.png in Resources */,
 				1AAEB45D19ACD3AE00B69773 /* Images.xcassets in Resources */,
+				1AF12D1519D95BBE001AE1FF /* todomon0-2.png in Resources */,
 				1AAEB44F19ACD3AE00B69773 /* InfoPlist.strings in Resources */,
 				1AAEB45819ACD3AE00B69773 /* Main.storyboard in Resources */,
+				1AF12D1119D948B2001AE1FF /* todomon0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
