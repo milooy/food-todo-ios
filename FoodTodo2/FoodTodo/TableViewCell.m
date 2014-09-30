@@ -40,7 +40,7 @@ const float UI_CUES_WIDTH = 50.0f;
         
         //컴플릿되면 초록배경
         _itemCompleteLayer = [CALayer layer];
-        _itemCompleteLayer.backgroundColor = [[[UIColor alloc]initWithRed:0.0 green:0.6 blue:0.0 alpha:1.0]CGColor];
+        _itemCompleteLayer.backgroundColor = [[[UIColor alloc]initWithRed:144/255.0 green:229/255.0 blue:234/255.0 alpha:0.6]CGColor];
         _itemCompleteLayer.hidden = YES;
         [self.layer insertSublayer:_itemCompleteLayer atIndex:0];
         
@@ -153,11 +153,13 @@ const float UI_CUES_WIDTH = 50.0f;
             [self.delegate toDoItemDeleted:self.todoItem];
         }
         
+        
         if(_markCompleteOnDragRelease){
             self.todoItem.completed = YES;
             _itemCompleteLayer.hidden = NO;
             _label.strikethrough = YES;
         }
+        
         
         
         
@@ -173,6 +175,7 @@ const float UI_CUES_WIDTH = 50.0f;
             NSLog(@"completed");
         }
          */
+        
     }
 
 }

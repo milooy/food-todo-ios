@@ -13,7 +13,7 @@
     CALayer* _strikethroughLayer;
 }
 
-const float STRIKEOUT_THICKNESS = 2.0f;
+const float STRIKEOUT_THICKNESS = 5.0f;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -39,7 +39,8 @@ const float STRIKEOUT_THICKNESS = 2.0f;
 
 //텍스트사이즈에 맞춰서 취소선 긋기
 -(void)resizeStrikeThrough {
-    CGSize textSize = [self.text sizeWithFont:self.font];
+//    CGSize textSize = [self.text sizeWithFont:self.font];
+    CGSize textSize = [self.text sizeWithAttributes:@{NSFontAttributeName:self.font}];
     _strikethroughLayer.frame = CGRectMake(0, self.bounds.size.height/2, textSize.width, STRIKEOUT_THICKNESS);
 }
 

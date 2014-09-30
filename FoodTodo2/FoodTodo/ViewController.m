@@ -57,9 +57,6 @@
 //    ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     //ViewController *viewController = [[ViewController alloc] init];
 
-
-    
-    //이거 어케 없애지
     _toDoItems = [[NSMutableArray alloc] init];
     [_toDoItems addObject:[ToDoItem toDoItemWithText:@"iOS 공부하기"]];
     [_toDoItems addObject:[ToDoItem toDoItemWithText:@"공차 사먹기"]];
@@ -83,7 +80,18 @@
     
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor colorWithRed:237/255.0 green:107/255.0 blue:90/255.0 alpha:1.0];
+    
+    
+    //투두몬
+    
+    NSArray *images = [NSArray arrayWithObjects:[UIImage imageNamed:@"todomon0-1.png"], [UIImage imageNamed:@"todomon0-2.png"], nil];
+    _todomon.animationImages = images;
+    _todomon.animationDuration = 1;
+    [_todomon startAnimating];
+//    [_todomon stopAnimating];
+
 }
+
 
 //단계별 색상 설정
 -(UIColor*)colorForIndex:(NSInteger) index {
@@ -110,7 +118,14 @@
 }
 
 -(void)toDoItemDeleted:(ToDoItem *)todoItem {
-    
+    [_todomon stopAnimating];
+    _todomon.image = [UIImage imageNamed:@"todomon0-5.png"];
+    double delayInSeconds = 0.5;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self reStartAnimation];
+    });
+
     NSUInteger index = [_toDoItems indexOfObject:todoItem];
     [self.tableView beginUpdates];
     [_toDoItems removeObject:todoItem];
@@ -119,7 +134,12 @@
     
 }
 
+-(void)reStartAnimation{
+    [_todomon startAnimating];
+}
+
 /*
+
 -(void)toDoItemCompleted:(ToDoItem *)todoItem {
     NSUInteger index = [_toDoItems indexOfObject:todoItem];
     NSIndexPath *indexPath1 = [NSIndexPath indexPathForRow:index inSection:0];
@@ -136,7 +156,9 @@
 -(void) toDoItemCompleting:(ToDoItem *)todoItem transparency:(NSInteger)transparency {
     NSLog(@"kakak");
 }
+ 
  */
+
 
 
 - (void)didReceiveMemoryWarning
