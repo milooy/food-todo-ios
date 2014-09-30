@@ -15,6 +15,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *todomon;
 @property (weak, nonatomic) IBOutlet UILabel *point;
 @property (weak, nonatomic) IBOutlet UIImageView *doughnut;
-@property (weak, nonatomic) IBOutlet UITextField *nickname;
 
 @end

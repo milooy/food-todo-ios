@@ -48,13 +48,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-    //ViewController *viewController = [[ViewController alloc] init];
     
-    _point.text = @"5";
-    NSLog(@"name: %@", _nickname.text);
-    
-    
+    _point.text = @"0";
+    /*
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self selector:@selector(saveText:) name:@"saveTextFieldText"object:nil];
+     */
+ 
     _toDoItems = [[NSMutableArray alloc] init];
     [_toDoItems addObject:[ToDoItem toDoItemWithText:@"iOS 공부하기"]];
     [_toDoItems addObject:[ToDoItem toDoItemWithText:@"공차 사먹기"]];
@@ -87,9 +87,11 @@
     _todomon.animationDuration = 1;
     [_todomon startAnimating];
 //    [_todomon stopAnimating];
-    
 
-
+}
+-(void)saveText:(NSNotification *)note{
+    NSString *text = [[note userInfo] objectForKey:@"inputText"];
+    NSLog(@"name: %@", text);
 }
 
 
