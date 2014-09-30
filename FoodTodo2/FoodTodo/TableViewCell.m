@@ -158,6 +158,7 @@ const float UI_CUES_WIDTH = 50.0f;
             self.todoItem.completed = YES;
             _itemCompleteLayer.hidden = NO;
             _label.strikethrough = YES;
+            [self.delegate toDoItemCompleted:self.todoItem];
         }
         
         

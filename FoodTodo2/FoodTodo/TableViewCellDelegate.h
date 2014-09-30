@@ -14,5 +14,4 @@
 //Deleted된거 알려줌!
 -(void) toDoItemDeleted:(ToDoItem *)todoItem;
 -(void) toDoItemCompleted:(ToDoItem *)todoItem;
--(void) toDoItemCompleting:(ToDoItem *)todoItem transparency:(NSInteger)transparency;
 @end

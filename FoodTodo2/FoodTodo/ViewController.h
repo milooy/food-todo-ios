@@ -13,5 +13,8 @@
 //UITableViewDataSource는 tableView:numberOfRowsInSection:이랑 tableView:cellForRowAtIndexPath를 implement해야함.
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIImageView *todomon;
+@property (weak, nonatomic) IBOutlet UILabel *point;
+@property (weak, nonatomic) IBOutlet UIImageView *doughnut;
+@property (weak, nonatomic) IBOutlet UITextField *nickname;
 
 @end

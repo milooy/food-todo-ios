@@ -16,6 +16,7 @@
 
 @implementation ViewController {
     NSMutableArray *_toDoItems; //인스턴스 변수 추가
+    NSArray *images;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -37,13 +38,6 @@
     //텍스트 집어넣기
 //    cell.textLabel.text = item.text;
     
-    /*
-    if(item.completed){
-        NSAttributedString *theAttributedString = [[NSAttributedString alloc]initWithString:cell.textLabel.text attributes:@{NSStrikethroughStyleAttributeName:[NSNumber numberWithInteger:NSUnderlineStyleSingle]}];
-        [cell.textLabel setAttributedText:theAttributedString];
-
-    }
-     */
     
     cell.delegate = self;
     cell.todoItem = item;
@@ -56,7 +50,11 @@
     [super viewDidLoad];
 //    ViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     //ViewController *viewController = [[ViewController alloc] init];
-
+    
+    _point.text = @"5";
+    NSLog(@"name: %@", _nickname.text);
+    
+    
     _toDoItems = [[NSMutableArray alloc] init];
     [_toDoItems addObject:[ToDoItem toDoItemWithText:@"iOS 공부하기"]];
     [_toDoItems addObject:[ToDoItem toDoItemWithText:@"공차 사먹기"]];
@@ -84,11 +82,13 @@
     
     //투두몬
     
-    NSArray *images = [NSArray arrayWithObjects:[UIImage imageNamed:@"todomon0-1.png"], [UIImage imageNamed:@"todomon0-2.png"], nil];
+    images = [NSArray arrayWithObjects:[UIImage imageNamed:@"todomon0-1.png"], [UIImage imageNamed:@"todomon0-2.png"], nil];
     _todomon.animationImages = images;
     _todomon.animationDuration = 1;
     [_todomon startAnimating];
 //    [_todomon stopAnimating];
+    
+
 
 }
 
@@ -138,18 +138,67 @@
     [_todomon startAnimating];
 }
 
-/*
+
 
 -(void)toDoItemCompleted:(ToDoItem *)todoItem {
+    /*
+    
     NSUInteger index = [_toDoItems indexOfObject:todoItem];
     NSIndexPath *indexPath1 = [NSIndexPath indexPathForRow:index inSection:0];
     UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath1];
     NSAttributedString *theAttributedString = [[NSAttributedString alloc]initWithString:cell.textLabel.text attributes:@{NSStrikethroughStyleAttributeName:[NSNumber numberWithInteger:NSUnderlineStyleSingle]}];
+     
     [cell.textLabel setAttributedText:theAttributedString];
-    
-//    [UIView animateWithDuration:2.0 animations:^{
-//        cell.backgroundColor = [UIColor greenColor];
+     */
+//    CGRect initialFrame = _doughnut.frame;
+//    CGRect displacedFrame = initialFrame;
+//    displacedFrame.origin.y += 500;
+//    [UIView animateWithDuration:0.8 animations:^{
+//        _doughnut.frame = initialFrame;
 //    }];
+    
+    
+    
+    [UIView animateWithDuration:1 animations:^(void){
+        [_doughnut setFrame:CGRectMake(_doughnut.frame.origin.x, _doughnut.frame.origin.y+100, 40, 40)];
+//        _doughnut.frame = CGRectMake(0, 0, 40, 40);
+    } completion:^(BOOL finished){
+        
+        NSLog(@"haha");
+    }];
+    
+    
+    /*
+    [UIView beginAnimations:nil context:NULL]; // animate the following:
+    _doughnut.frame = CGRectMake(500, 500, 100, 100); // move to new location
+
+    [UIView setAnimationDuration:0.3];
+    [UIView commitAnimations];
+    */
+    
+    /*
+    [UIView animateWithDuration:1.0 animations:^(void) {
+        _doughnut.frame = CGRectMake(80, 80, 80, 50);
+    } completion:^(BOOL finished) {
+        NSLog(@"complete");
+    }];
+     */
+    
+    int pointPlus = [_point.text intValue]+1;
+    _point.text = [NSString stringWithFormat:@"%d", pointPlus];
+    [_todomon stopAnimating];
+    NSArray *images2 = [NSArray arrayWithObjects:[UIImage imageNamed:@"todomon0-3.png"], [UIImage imageNamed:@"todomon0-4.png"], nil];
+    _todomon.animationImages = images2;
+    _todomon.animationDuration = 0.3;
+    [_todomon startAnimating];
+    double delayInSeconds = 0.8;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [_todomon stopAnimating];
+        _todomon.animationImages = images;
+        _todomon.animationDuration = 1;
+        [self reStartAnimation];
+    });
     
 }
 
@@ -157,7 +206,7 @@
     NSLog(@"kakak");
 }
  
- */
+ 
 
 
 
